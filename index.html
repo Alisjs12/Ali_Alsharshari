@@ -6,48 +6,29 @@
 <title>Ali Alsharshari | Freelance Tech Services</title>
 
 <style>
-/* ===== Logo ===== */
-.logo{
-  position:fixed;
-  top:20px;
-  right:20px; /* لليسار غيّرها إلى left */
-  z-index:1000;
-}
-.logo img{
-  width:70px;
-  height:auto;
-  border-radius:12px;
-  box-shadow:0 0 15px rgba(0,183,255,.5);
-}
-
-/* موبايل */
-@media(max-width:600px){
-  .logo img{
-    width:55px;
-  }
-}
-
-
-/* ===== Video ===== */
-.video-box{
-  margin-top:15px;
-}
-.video-box video{
-  width:100%;
-  max-width:800px;
-  display:block;
-  margin:auto;
-  border-radius:18px;
-  box-shadow:0 0 25px rgba(0,0,0,.5);
-}
-
-
 *{box-sizing:border-box}
+
 body{
   margin:0;
   font-family:'Segoe UI', Tahoma, Arial;
   background:linear-gradient(180deg,#0b1220,#050812);
   color:#fff;
+}
+
+/* ===== Logo ===== */
+.logo{
+  position:fixed;
+  top:20px;
+  right:20px;
+  z-index:1000;
+}
+.logo img{
+  width:70px;
+  border-radius:12px;
+  box-shadow:0 0 15px rgba(0,183,255,.5);
+}
+@media(max-width:600px){
+  .logo img{width:55px}
 }
 
 /* ===== Top Bar ===== */
@@ -61,7 +42,7 @@ body{
 .top-bar span{
   display:inline-block;
   white-space:nowrap;
-  animation: move 14s linear infinite;
+  animation:move 14s linear infinite;
 }
 @keyframes move{
   from{transform:translateX(100%)}
@@ -71,10 +52,13 @@ body{
 /* ===== Header ===== */
 header{
   text-align:center;
-  padding:60px 15px 40px;
+  padding:70px 15px 40px;
 }
 header h1{font-size:38px;margin:0}
 header h2{opacity:.85;margin:10px 0 25px}
+@media(max-width:600px){
+  header h1{font-size:28px}
+}
 
 /* ===== Buttons ===== */
 .cta{
@@ -119,6 +103,16 @@ section{
   to{opacity:1;transform:translateY(0)}
 }
 
+/* ===== Video ===== */
+.video-box video{
+  width:100%;
+  max-width:800px;
+  display:block;
+  margin:auto;
+  border-radius:18px;
+  box-shadow:0 0 25px rgba(0,0,0,.5);
+}
+
 /* ===== Services ===== */
 .services{
   display:grid;
@@ -137,7 +131,7 @@ section{
 .open{color:#00ff88}
 .closed{color:#ff5555}
 
-/* ===== Contact Form ===== */
+/* ===== Contact ===== */
 .contact-form{
   display:flex;
   flex-direction:column;
@@ -148,7 +142,6 @@ section{
   padding:12px;
   border-radius:10px;
   border:none;
-  outline:none;
 }
 .contact-form button{
   background:#00b7ff;
@@ -175,25 +168,24 @@ footer{
   opacity:.6;
   font-size:14px;
 }
-
-@media(max-width:600px){
-  header h1{font-size:28px}
-}
 </style>
 </head>
 
 <body>
-<div class="https://th.bing.com/th/id/OIP.TN46NREv0gMJt9x-D4qYOwHaHa?w=186&h=186&c=7&r=0&o=5&cb=ucfimg2&dpr=1.1&pid=1.7&ucfimg=1">
-  <img src="https://th.bing.com/th/id/OIP.TN46NREv0gMJt9x-D4qYOwHaHa?w=186&h=186&c=7&r=0&o=5&cb=ucfimg2&dpr=1.1&pid=1.7&ucfimg=1" alt="Ali Alsharshari Logo">
+
+<!-- Logo -->
+<div class="logo">
+  <img src="https://th.bing.com/th/id/OIP.TN46NREv0gMJt9x-D4qYOwHaHa?w=186&h=186&c=7&r=0&o=5&pid=1.7" alt="Logo">
 </div>
 
+<!-- Top Bar -->
 <div class="top-bar">
   <span id="topText"></span>
 </div>
 
 <header>
-  <h1 id="title">علي الشرشاري</h1>
-  <h2 id="subtitle">مطور مواقع وخدمات تقنية حرة</h2>
+  <h1>علي الشرشاري</h1>
+  <h2>مطور مواقع وخدمات تقنية حرة</h2>
 
   <div class="cta">
     <a href="#contact" class="primary">اطلب خدمة</a>
@@ -210,34 +202,29 @@ footer{
   <div id="workStatus" class="status"></div>
 </header>
 
-<section class="card" id="intro-video">
+<section class="card">
   <h2>فيديو تعريفي</h2>
-
   <div class="video-box">
-    <video controls poster="poster.jpg">
-      <source src="intro.mp4" type="video/mp4">
-      متصفحك لا يدعم تشغيل الفيديو
+    <video controls>
+      <source src="video.mp4" type="video/mp4">
+      متصفحك لا يدعم الفيديو
     </video>
   </div>
 </section>
-
-
-
-
 
 <section class="card" id="about">
   <h2>من أنا</h2>
   <p>
     فريلانسر متخصص في تطوير المواقع والخدمات التقنية، أساعد الأفراد والشركات
-    على بناء أنظمة احترافية وحلول دفع إلكتروني آمنة.
+    على بناء حلول احترافية وأنظمة دفع آمنة.
   </p>
 </section>
 
 <section class="card" id="services">
   <h2>الخدمات</h2>
   <div class="services">
-    <div class="service">🌐 تصميم مواقع احترافية</div>
-    <div class="service">💳 أنظمة خدمات مدفوعة</div>
+    <div class="service">🌐 تصميم مواقع</div>
+    <div class="service">💳 أنظمة مدفوعة</div>
     <div class="service">📊 لوحات تحكم</div>
     <div class="service">🔗 PayPal & USDT</div>
   </div>
@@ -246,15 +233,14 @@ footer{
 <section class="card" id="portfolio">
   <h2>أعمالي</h2>
   <div class="services">
-    <div class="service">🌐 موقع خدمات تقنية</div>
-    <div class="service">📊 لوحة تحكم عملاء</div>
-    <div class="service">💳 نظام دفع إلكتروني</div>
+    <div class="service">🌐 موقع تقني</div>
+    <div class="service">📊 لوحة تحكم</div>
+    <div class="service">💳 نظام دفع</div>
   </div>
 </section>
 
 <section class="card" id="contact">
   <h2>تواصل معي</h2>
-
   <form class="contact-form" onsubmit="sendWhatsApp(event)">
     <input type="text" id="name" placeholder="الاسم" required>
     <input type="email" id="email" placeholder="البريد الإلكتروني" required>
@@ -275,50 +261,42 @@ footer{
 <footer>© 2025 Ali Alsharshari</footer>
 
 <script>
-/* ===== Top Text ===== */
-const topText=document.getElementById("topText");
-const topAR=[
+const texts=[
 "مرحبا بك في موقعي الاحترافي",
 "خدمات تقنية وأعمال حرة",
 "جاهز لتنفيذ المشاريع",
 "صرمان – ليبيا"
 ];
 let i=0;
+const topText=document.getElementById("topText");
 setInterval(()=>{
-  topText.textContent=topAR[i];
-  i=(i+1)%topAR.length;
+  topText.textContent=texts[i];
+  i=(i+1)%texts.length;
 },4000);
-topText.textContent=topAR[0];
+topText.textContent=texts[0];
 
-/* ===== Status ===== */
 const workStatus=document.getElementById("workStatus");
-function checkStatus(){
-  const h=new Date().getHours();
-  if(h>=9 && h<22){
-    workStatus.textContent="🟢 متاح للعمل";
-    workStatus.className="status open";
-  }else{
-    workStatus.textContent="🔴 غير متاح";
-    workStatus.className="status closed";
-  }
+const h=new Date().getHours();
+if(h>=9 && h<22){
+  workStatus.textContent="🟢 متاح للعمل";
+  workStatus.className="status open";
+}else{
+  workStatus.textContent="🔴 غير متاح";
+  workStatus.className="status closed";
 }
-checkStatus();
 
-/* ===== WhatsApp ===== */
 function sendWhatsApp(e){
   e.preventDefault();
-  const name=nameInput.value;
-  const email=emailInput.value;
-  const msg=messageInput.value;
+  const name=document.getElementById("name").value;
+  const email=document.getElementById("email").value;
+  const msg=document.getElementById("message").value;
 
-  const text=`الاسم: ${name}%0Aالبريد: ${email}%0Aالرسالة:%0A${msg}`;
-  window.open("https://wa.me/218931473373?text="+text,"_blank");
+  const text=`الاسم: ${name}\nالبريد: ${email}\nالرسالة:\n${msg}`;
+  window.open("https://wa.me/218931473373?text="+encodeURIComponent(text));
 }
-
-const nameInput=document.getElementById("name");
-const emailInput=document.getElementById("email");
-const messageInput=document.getElementById("message");
 </script>
 
 </body>
 </html>
+
+
